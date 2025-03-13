@@ -1,0 +1,35 @@
+Recommended Project Idea #2: SuperNovae Classification
+
+
+The Team
+
+Name: Matthew Owen
+Email: matthew.owen@ucdenver.edu
+Role: solo project, so my role is everything
+
+
+Problem Statement and Background
+
+This project aims to develop automated classifiers to detect supernovae in large volumes of astronomical images by training on hand-categorized images, enabling detection of these transient objects. The primary question is a binary classification "is this image from a supernova"? Using hand-labelled data I will train a classifier and test it using cross-validation. I will become more familiar with both processes specific to developing binary classifiers, and processes related to AI development in general, like good development practices such as cross-validation.
+
+
+Data Sources
+
+I intend to use data from the link below. In addition, I will make sure that the data I use has both supernovae and non-supernovae images that are all labelled for training. I will make sure such data is normalized (pixel value ranges, image size, labels, etc...), and organized in a format beneficial to training a model. I intend to use the first part of the raw stacked data, and have the option to also use the second part (other half) of the raw stacked data if I need. Additionally, I can use other data sets from this website that are not *as* related to displaying supernovae, such as the IR SNTEMPLATES stacked fits data, to help the model know what isn't a depicted supernovae. The directory structure is comprised of more compressed directories, each containing their own fragments of data that each have their own collection of .fits files, which are astronomy-related image files that I may need to translate into another image file type.
+
+https://lweb.cfa.harvard.edu/supernova/SNarchive.html
+
+
+Analysis Goals
+
+My goals for this  project are to train a model that can accurately classify supernovae into different types using the raw stacked data, and I'm thinking that if I can achieve a classification accuracy of at least 90% on a held-out test set, that would be a pretty good starting point. Along the way, I'd like to see if the model can generalize to new, unseen data from the same or similar surveys, and if I can develop a model that can predict the likelihood of a supernova being a certain type based on its spectral features, that would be really cool. I'm also hoping to gain some insights into the underlying physical processes that drive the differences between supernova types, so I'm looking to identify some physical parameters that are significantly correlated with supernova type. Of course, all of these goals are pretty tentative and might change as I start, but I look forward to see what I can learn from making this model, even if it's just some interesting patterns or structures that I hadn't expected to find or better development practices.
+
+
+Tools Description (Tentative)
+
+I will train a DNN using TensorFlow, perhaps also using some other Python libraries or BASH scripts to organize and normalize data beforehand. Then I will use TF to cross-validate the data and benchmark my model.
+
+
+Data Products
+
+I will test my model for its speed and reliability by timing its workings and, with context, determining if it's at a good speed, and gauging its accuracy (I want at least a 90% accuracy). I may provide different results for different data and/or paramaters given to the model.
